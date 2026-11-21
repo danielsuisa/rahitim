@@ -13,8 +13,8 @@
     <link rel="icon" href="./favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>רהיטים</title>
-    <script type="module" crossorigin src="./assets/index-9TM9wUC9.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DMXHwzby.css">
+    <script type="module" crossorigin src="./assets/index-Bc8WEUVQ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-tNVtkjCK.css">
   </head>
   <body>
     <div id="update-banner" class="update" hidden>
@@ -32,7 +32,7 @@
           </svg>
           <div>
             <h1>רהיטים</h1>
-            <p class="ver">גרסה <span id="version">1.0.0</span></p>
+            <p class="ver">גרסה <span id="version">1.2.0</span></p>
           </div>
         </div>
         <label class="project-switch">
@@ -43,6 +43,7 @@
       </header>
       <div class="workspace">
         <section class="viewport" id="viewport">
+          <button id="expand-3d" type="button" class="expand-btn" aria-pressed="false">הגדל</button>
           <canvas id="c3d" aria-label="תצוגת תלת־ממד"></canvas>
           <div id="fallback" class="fallback" hidden>
             <p>WebGL לא זמין בדפדפן הזה, אז אין תלת־ממד. השרטוטים, העריכה וכתב הכמויות ממשיכים לעבוד.</p>
@@ -89,6 +90,19 @@
             </div>
           </div>
           <p class="gesture">גרירה מסובבת את המבט · הידיות מזיזות חלק</p>
+          <div id="fs-toolbar" class="fs-toolbar" dir="rtl">
+            <button id="exit-expand" type="button">סגור</button>
+            <button type="button" data-gizmo="translate">הזזה</button>
+            <button type="button" data-gizmo="rotate">סיבוב</button>
+            <button type="button" data-gizmo="scale">גודל</button>
+            <button type="button" data-action="undo">בטל</button>
+            <button type="button" data-action="redo">חזור</button>
+            <label class="explode fs-explode">
+              <span>מפורק</span>
+              <input id="explode-fs" type="range" min="0" max="100" value="0" aria-label="מחובר עד מפורק" />
+            </label>
+            <button id="sheet-toggle" type="button" aria-expanded="false" aria-controls="gizmo-fields">מידות</button>
+          </div>
         </section>
         <section id="panel" class="panel">
           <div data-pane="template"></div>

@@ -1,7 +1,7 @@
-/* רהיטים service worker 1.1.0 */
-const VERSION = "1.1.0";
+/* רהיטים service worker 1.2.0 */
+const VERSION = "1.2.0";
 const CACHE = 'rahitiim-' + VERSION;
-const ASSETS = ["./apple-touch-icon.png","./assets/index-9TM9wUC9.js","./assets/index-DMXHwzby.css","./assets/rubik-hebrew-400-normal-BQDoxs6C.woff","./assets/rubik-hebrew-400-normal-Dp0lvSRB.woff2","./assets/rubik-hebrew-500-normal--anb7y8_.woff","./assets/rubik-hebrew-500-normal-B_5jqoVI.woff2","./assets/rubik-hebrew-700-normal-B2Hm7hpE.woff","./assets/rubik-hebrew-700-normal-Da14F88e.woff2","./assets/rubik-latin-400-normal-BV1Ho3GG.woff","./assets/rubik-latin-400-normal-j0pmKyiQ.woff2","./assets/rubik-latin-500-normal-1os41rQk.woff2","./assets/rubik-latin-500-normal-LZYVHeqz.woff","./assets/rubik-latin-700-normal-D-tMm-eS.woff2","./assets/rubik-latin-700-normal-KHOtubUA.woff","./favicon.png","./icon-192.png","./icon-512-maskable.png","./icon-512.png","./index.html","./manifest.webmanifest"];
+const ASSETS = ["./apple-touch-icon.png","./assets/index-Bc8WEUVQ.js","./assets/index-tNVtkjCK.css","./assets/rubik-hebrew-400-normal-BQDoxs6C.woff","./assets/rubik-hebrew-400-normal-Dp0lvSRB.woff2","./assets/rubik-hebrew-500-normal--anb7y8_.woff","./assets/rubik-hebrew-500-normal-B_5jqoVI.woff2","./assets/rubik-hebrew-700-normal-B2Hm7hpE.woff","./assets/rubik-hebrew-700-normal-Da14F88e.woff2","./assets/rubik-latin-400-normal-BV1Ho3GG.woff","./assets/rubik-latin-400-normal-j0pmKyiQ.woff2","./assets/rubik-latin-500-normal-1os41rQk.woff2","./assets/rubik-latin-500-normal-LZYVHeqz.woff","./assets/rubik-latin-700-normal-D-tMm-eS.woff2","./assets/rubik-latin-700-normal-KHOtubUA.woff","./favicon.png","./icon-192.png","./icon-512-maskable.png","./icon-512.png","./index.html","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
