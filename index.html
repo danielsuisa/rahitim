@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3d2914" />
+    <meta name="description" content="רהיטים — תכנון רהיטי עץ ומתכת במכשיר, בלי שרת." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="רהיטים" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <title>רהיטים</title>
+    <script type="module" crossorigin src="./assets/index-CAQOEM3i.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DTPzuqNV.css">
+  </head>
+  <body>
+    <div id="update-banner" class="update" hidden>
+      <p>גרסה <b></b> מוכנה. רענון טוען אותה בלי לאבד פרויקטים שמורים.</p>
+      <button type="button">רענון</button>
+    </div>
+    <div class="app">
+      <header class="top">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="4" y="6" width="40" height="36" rx="8" fill="#3d2914"/>
+            <rect x="10" y="16" width="28" height="5" rx="1.5" fill="#e2b56a"/>
+            <rect x="14" y="21" width="4" height="14" fill="#c4844a"/>
+            <rect x="30" y="21" width="4" height="14" fill="#9aa6b2"/>
+          </svg>
+          <div>
+            <h1>רהיטים</h1>
+            <p class="ver">גרסה <span id="version">1.0.0</span></p>
+          </div>
+        </div>
+        <label class="project-switch">
+          <span class="sr">פרויקט</span>
+          <select id="project-select"></select>
+        </label>
+        <button id="print-btn" type="button">הדפסה</button>
+      </header>
+      <div class="workspace">
+        <section class="viewport" id="viewport">
+          <canvas id="c3d" aria-label="תצוגת תלת־ממד"></canvas>
+          <div id="fallback" class="fallback" hidden>
+            <p>WebGL לא זמין בדפדפן הזה, אז אין תלת־ממד. השרטוטים, העריכה וכתב הכמויות ממשיכים לעבוד.</p>
+          </div>
+          <div class="vbar">
+            <p id="stats"></p>
+            <p id="detach" hidden>עריכה ידנית</p>
+            <label class="explode">
+              <span>מחובר</span>
+              <input id="explode" type="range" min="0" max="100" value="0" aria-label="מחובר עד מפורק" />
+              <span>מפורק</span>
+            </label>
+            <button id="reset-cam" type="button">מבט</button>
+          </div>
+          <p class="gesture">גרירה מסובבת · צביטה מתקרבת</p>
+        </section>
+        <section id="panel" class="panel">
+          <div data-pane="template"></div>
+          <div data-pane="edit" id="editor-host" hidden></div>
+          <div data-pane="draw" hidden></div>
+          <div data-pane="bom" hidden></div>
+          <div data-pane="files" hidden></div>
+        </section>
+      </div>
+      <nav class="tabbar" aria-label="מסכים">
+        <button type="button" data-tab="template" class="on">תבנית</button>
+        <button type="button" data-tab="edit">עריכה</button>
+        <button type="button" data-tab="draw">שרטוט</button>
+        <button type="button" data-tab="bom">כמויות</button>
+        <button type="button" data-tab="files">קבצים</button>
+      </nav>
+    </div>
+    <article id="report"></article>
+    <p id="toast" class="toast" role="status" hidden></p>
+    <noscript>רהיטים צריך JavaScript. אין שרת — הכל רץ במכשיר.</noscript>
+  </body>
+</html>
