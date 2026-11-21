@@ -13,8 +13,8 @@
     <link rel="icon" href="./favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>רהיטים</title>
-    <script type="module" crossorigin src="./assets/index-CAQOEM3i.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DTPzuqNV.css">
+    <script type="module" crossorigin src="./assets/index-9TM9wUC9.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DMXHwzby.css">
   </head>
   <body>
     <div id="update-banner" class="update" hidden>
@@ -57,7 +57,38 @@
             </label>
             <button id="reset-cam" type="button">מבט</button>
           </div>
-          <p class="gesture">גרירה מסובבת · צביטה מתקרבת</p>
+          <div id="gizmo-dock" class="gizmo-dock" dir="rtl">
+            <div id="gizmo-fields"></div>
+            <div class="gizmo-row">
+              <button type="button" data-gizmo="translate">הזזה</button>
+              <button type="button" data-gizmo="rotate">סיבוב</button>
+              <button type="button" data-gizmo="scale">גודל</button>
+              <button type="button" data-action="undo">בטל</button>
+              <button type="button" data-action="redo">חזור</button>
+            </div>
+            <div class="gizmo-row">
+              <button type="button" data-action="dup-part">שכפול</button>
+              <button type="button" data-action="mirror-part">ראי</button>
+              <button type="button" data-action="group">קבוצה</button>
+              <button type="button" data-action="ungroup">פירוק</button>
+              <button type="button" data-action="lock">נעילה</button>
+              <button type="button" class="danger" data-action="delete-part">מחק</button>
+            </div>
+            <div class="gizmo-row">
+              <button type="button" data-add="panel">לוח</button>
+              <button type="button" data-add="lumber">קורה</button>
+              <button type="button" data-add="tube">צינור</button>
+              <button type="button" data-add="flat">פס</button>
+              <button type="button" data-add="angle">זווית</button>
+              <button type="button" data-add="box">תיבה</button>
+            </div>
+            <div class="gizmo-row checks">
+              <label><input id="snap-move" type="checkbox" checked /> הצמדת מידה</label>
+              <label><input id="snap-angle" type="checkbox" /> הצמדת זווית 15°</label>
+              <label><input id="multi-select" type="checkbox" /> בחירה מרובה</label>
+            </div>
+          </div>
+          <p class="gesture">גרירה מסובבת את המבט · הידיות מזיזות חלק</p>
         </section>
         <section id="panel" class="panel">
           <div data-pane="template"></div>
